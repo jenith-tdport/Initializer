@@ -1,3 +1,61 @@
+# INITIALIZER QUIZ GAME - QUESTION DATABASE
+# ==========================================
+# 
+# INSTRUCTIONS FOR AI: Generate additional quiz questions following this exact format.
+# 
+# CSV FORMAT REQUIREMENTS:
+# - Each question must have exactly 10 comma-separated fields
+# - NO quotes unless the field itself contains a comma
+# - NO empty lines between questions
+# - NO additional headers - just add data rows below the existing questions
+# 
+# COLUMN DEFINITIONS:
+# 1. term: The acronym/initialism (e.g., CPU, NASA, LOL)
+# 2. kind: Must be either "acronym" OR "initialism"
+#    - acronym = pronounced as word (NASA, RADAR, LASER)
+#    - initialism = pronounced letter-by-letter (FBI, CPU, HTML)
+# 3. category: Choose from: computing, technology, science, business, government, 
+#    education, internet, general, medical, military, sports, food, finance, gaming, music, travel
+# 4. question: Usually "What does [TERM] stand for?" (can vary slightly for variety)
+# 5. optionA: First answer choice
+# 6. optionB: Second answer choice  
+# 7. optionC: Third answer choice
+# 8. optionD: Fourth answer choice
+# 9. correct: Which option is correct - MUST be exactly A, B, C, or D (capital letter)
+# 10. explanation: Educational fact about the term (keep under 100 characters)
+# 
+# CRITICAL REQUIREMENTS:
+# 1. BALANCE CORRECT ANSWERS: Distribute evenly across A, B, C, D (roughly 25% each)
+#    - Current distribution: A=10, B=10, C=9, D=10 (out of 39 questions)
+#    - When adding new questions, help maintain this balance
+# 
+# 2. MAKE WRONG ANSWERS PLAUSIBLE:
+#    - ❌ BAD: "CPU = Cute Purple Unicorn" (obviously wrong)
+#    - ✅ GOOD: "CPU = Core Processing Unit" (sounds technical and believable)
+#    - All wrong answers should sound like they COULD be correct
+# 
+# 3. VARY THE DIFFICULTY:
+#    - Easy: Common terms everyone knows (USB, GPS, FAQ)
+#    - Medium: Technical but recognizable (API, HTML, PhD)
+#    - Hard: Specialized terms (PCMCIA, WYSIWYG, CAPTCHA)
+# 
+# 4. WRITE EDUCATIONAL EXPLANATIONS:
+#    - Don't just expand the acronym
+#    - Add an interesting fact or context
+#    - Example: "RADAR was originally an acronym but is now used as a standard word."
+# 
+# EXAMPLES OF WELL-FORMED QUESTIONS:
+# BIOS,initialism,computing,What does BIOS stand for?,Basic Input/Output System,Binary Integrated Operating System,Built-In Operating Software,Basic Internal Operating Standard,A,BIOS initializes hardware during boot before the operating system loads.
+# FOMO,acronym,internet,What does FOMO stand for?,Fear Of Missing Out,Friends Only Messaging Online,Frequently Occurring Mobile Obsession,Finding Other Meaningful Options,A,FOMO describes anxiety over missing exciting or interesting events.
+# 
+# TASK: Add 50 new questions below the existing ones. Ensure:
+# - Mix of categories (don't just do all computing)
+# - Balanced correct answers (aim for 12-13 each of A, B, C, D)
+# - Plausible wrong answers that sound real
+# - Educational explanations with interesting facts
+# - Proper CSV formatting with no extra quotes or spaces
+# 
+# END OF INSTRUCTIONS - DATA STARTS BELOW:
 term,kind,category,question,optionA,optionB,optionC,optionD,correct,explanation
 CPU,initialism,computing,What does CPU stand for?,Central Processing Unit,Computer Programming Unit,Core Processing Unit,Central Program Unit,A,The CPU executes instructions and is the brain of the computer.
 RAM,initialism,computing,What does RAM stand for?,Rapid Access Module,Read And Modify,Random Access Memory,Remote Access Manager,C,RAM is volatile memory used for temporary data storage while programs run.

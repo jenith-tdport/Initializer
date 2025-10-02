@@ -2,10 +2,17 @@ import { Question } from '../types';
 
 export function parseCSV(csvText: string): Question[] {
   const lines = csvText.trim().split('\n');
-  if (lines.length < 2) return [];
+  
+  // Filter out comment lines (starting with #) and empty lines
+  const validLines = lines.filter(line => {
+    const trimmed = line.trim();
+    return trimmed && !trimmed.startsWith('#');
+  });
+  
+  if (validLines.length < 2) return [];
 
   // Remove header line
-  const dataLines = lines.slice(1);
+  const dataLines = validLines.slice(1);
 
   const questions: Question[] = [];
   
