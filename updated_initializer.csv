@@ -1,0 +1,155 @@
+# INITIALIZER QUIZ GAME - QUESTION DATABASE
+# ==========================================
+# 
+# INSTRUCTIONS FOR AI: Generate additional quiz questions following this exact format.
+# 
+# CSV FORMAT REQUIREMENTS:
+# - Each question must have exactly 10 comma-separated fields
+# - NO quotes unless the field itself contains a comma
+# - NO empty lines between questions
+# - NO additional headers - just add data rows below the existing questions
+# 
+# COLUMN DEFINITIONS:
+"# 1. term: The acronym/initialism (e.g., CPU, NASA, LOL)"
+"# 2. kind: Must be either ""acronym"" OR ""initialism"""
+"#    - acronym = pronounced as word (NASA, RADAR, LASER)"
+"#    - initialism = pronounced letter-by-letter (FBI, CPU, HTML)"
+"# 3. category: Choose from: computing, technology, science, business, government, "
+"#    education, internet, general, medical, military, sports, food, finance, gaming, music, travel"
+"# 4. question: Usually ""What does [TERM] stand for?"" (can vary slightly for variety)"
+# 5. optionA: First answer choice
+# 6. optionB: Second answer choice  
+# 7. optionC: Third answer choice
+# 8. optionD: Fourth answer choice
+"# 9. correct: Which option is correct - MUST be exactly A, B, C, or D (capital letter)"
+# 10. explanation: Educational fact about the term (keep under 100 characters)
+# 
+# CRITICAL REQUIREMENTS:
+"# 1. BALANCE CORRECT ANSWERS: Distribute evenly across A, B, C, D (roughly 25% each)"
+"#    - Current distribution: A=10, B=10, C=9, D=10 (out of 39 questions)"
+"#    - When adding new questions, help maintain this balance"
+# 
+# 2. MAKE WRONG ANSWERS PLAUSIBLE:
+"#    - ❌ BAD: ""CPU = Cute Purple Unicorn"" (obviously wrong)"
+"#    - ✅ GOOD: ""CPU = Core Processing Unit"" (sounds technical and believable)"
+#    - All wrong answers should sound like they COULD be correct
+# 
+# 3. VARY THE DIFFICULTY:
+"#    - Easy: Common terms everyone knows (USB, GPS, FAQ)"
+"#    - Medium: Technical but recognizable (API, HTML, PhD)"
+"#    - Hard: Specialized terms (PCMCIA, WYSIWYG, CAPTCHA)"
+# 
+# 4. WRITE EDUCATIONAL EXPLANATIONS:
+#    - Don't just expand the acronym
+#    - Add an interesting fact or context
+"#    - Example: ""RADAR was originally an acronym but is now used as a standard word."""
+# 
+# EXAMPLES OF WELL-FORMED QUESTIONS:
+"# BIOS,initialism,computing,What does BIOS stand for?,Basic Input/Output System,Binary Integrated Operating System,Built-In Operating Software,Basic Internal Operating Standard,A,BIOS initializes hardware during boot before the operating system loads."
+"# FOMO,acronym,internet,What does FOMO stand for?,Fear Of Missing Out,Friends Only Messaging Online,Frequently Occurring Mobile Obsession,Finding Other Meaningful Options,A,FOMO describes anxiety over missing exciting or interesting events."
+# 
+# TASK: Add 50 new questions below the existing ones. Ensure:
+# - Mix of categories (don't just do all computing)
+"# - Balanced correct answers (aim for 12-13 each of A, B, C, D)"
+# - Plausible wrong answers that sound real
+# - Educational explanations with interesting facts
+# - Proper CSV formatting with no extra quotes or spaces
+# 
+# END OF INSTRUCTIONS - DATA STARTS BELOW:
+"term,kind,category,question,optionA,optionB,optionC,optionD,correct,explanation"
+"CPU,initialism,computing,What does CPU stand for?,Central Processing Unit,Computer Programming Unit,Core Processing Unit,Central Program Unit,A,The CPU executes instructions and is the brain of the computer."
+"RAM,initialism,computing,What does RAM stand for?,Rapid Access Module,Read And Modify,Random Access Memory,Remote Access Manager,C,RAM is volatile memory used for temporary data storage while programs run."
+"API,initialism,computing,What does API stand for?,Automated Program Integration,Application Programming Interface,Advanced Port Interface,App Processing Instruction,B,APIs let different software systems communicate with each other."
+"HTML,initialism,computing,What does HTML stand for?,High Tech Modern Language,Home Tool Markup Language,Hyper Transfer Machine Language,HyperText Markup Language,D,HTML is the standard markup language for creating web pages."
+"CSS,initialism,computing,What does CSS stand for?,Cascading Style Sheets,Computer Style System,Creative Style Scripts,Central Server System,A,CSS describes how HTML elements should be displayed."
+"GPS,initialism,technology,What does GPS stand for?,General Position Sensor,Geographic Point System,Global Positioning System,Guided Pathway Signal,C,GPS uses satellites to determine location anywhere on Earth."
+"NASA,initialism,science,What does NASA stand for?,North American Space Agency,National Aeronautics and Space Administration,National Aviation and Space Authority,New Aerospace Systems Agency,B,NASA is the US federal agency responsible for space programs."
+"FBI,initialism,government,What does FBI stand for?,Federal Banking Institution,Foreign Border Inspection,Federal Business Institute,Federal Bureau of Investigation,D,The FBI is the domestic intelligence and security service of the United States."
+"CEO,initialism,business,What does CEO stand for?,Central Executive Operations,Corporate Efficiency Officer,Company Evaluation Officer,Chief Executive Officer,D,The CEO is the highest-ranking person in a company."
+"GDP,initialism,economics,What does GDP stand for?,General Development Plan,Global Distribution Protocol,Gross Domestic Product,Government Development Program,C,GDP measures the total value of goods and services produced by a country."
+"USB,initialism,computing,What does USB stand for?,United System Board,User System Bridge,Unified Storage Block,Universal Serial Bus,D,USB is an industry standard for cables and connectors."
+"WiFi,initialism,technology,What does WiFi stand for?,Wide Field Internet,Wireless Fidelity,World Internet Federation,Web Interface Field,B,WiFi is a wireless networking technology using radio waves."
+"PDF,initialism,computing,What does PDF stand for?,Personal Data File,Print Display Format,Portable Document Format,Program Data Format,C,PDF is a file format developed by Adobe for document sharing."
+"ATM,initialism,banking,What does ATM stand for?,Automated Teller Machine,Automatic Transaction Module,Advanced Transfer Method,Account Transfer Manager,A,ATMs allow customers to perform banking transactions without a human teller."
+"DNA,initialism,science,What does DNA stand for?,Dynamic Natural Algorithm,Deoxyribonucleic Acid,Data Network Architecture,Digital Network Access,B,DNA carries genetic instructions for all known living organisms."
+"LED,initialism,technology,What does LED stand for?,Low Energy Device,Laser Enhanced Display,Light Emitting Diode,Linear Electric Driver,C,LEDs are semiconductor devices that emit light when current flows through them."
+"FAQ,initialism,general,What does FAQ stand for?,Fast Answer Queue,Full Article Query,First Aid Questions,Frequently Asked Questions,D,FAQs are lists of common questions and answers about a topic."
+"VIP,initialism,general,What does VIP stand for?,Verified Identity Pass,Virtual Interactive Platform,Very Important Person,Visual Information Protocol,C,VIP refers to someone accorded special privileges due to their status."
+"DIY,initialism,general,What does DIY stand for?,Design It Yourself,Do It Yourself,Daily Improvement Yield,Direct Input Yield,B,DIY refers to building or repairing something without professional help."
+"ASAP,initialism,general,What does ASAP stand for?,Always Safe And Protected,As Soon As Possible,Advanced System Application Protocol,Automatic Service And Processing,B,ASAP is used to indicate something needs urgent attention."
+"HTTP,initialism,computing,What does HTTP stand for?,Hyper Transfer Text Program,HyperText Transfer Protocol,High Tech Transfer Process,Host To Terminal Protocol,B,HTTP is the foundation of data communication for the World Wide Web."
+"JSON,initialism,computing,What does JSON stand for?,Java System Object Notation,JavaScript Object Network,JavaScript Object Notation,Java Standard Output Name,C,JSON is a lightweight data interchange format that's easy for humans to read."
+"SQL,initialism,computing,What does SQL stand for?,Structured Query Language,System Query Logic,Sequential Question List,Server Quality Level,A,SQL is used to communicate with and manipulate databases."
+"URL,initialism,computing,What does URL stand for?,Universal Resource Link,User Resource Location,Unified Registry Location,Uniform Resource Locator,D,URL is the address of a resource on the Internet."
+"WWW,initialism,computing,What does WWW stand for?,Wide World Website,Web Wide World,World Web Window,World Wide Web,D,WWW is the system of interlinked hypertext documents accessed via the Internet."
+"PhD,initialism,education,What does PhD stand for?,Professional Higher Degree,Philosophy Doctorate,Doctor of Philosophy,Post Honorary Degree,C,PhD is the highest academic degree awarded by universities."
+"MBA,initialism,education,What does MBA stand for?,Major Business Associate,Master of Business Administration,Management Business Administration,Modern Banking Academy,B,MBA is a graduate degree focused on business administration and management."
+"IQ,initialism,psychology,What does IQ stand for?,Intelligence Quotient,Intellectual Quality,Information Query,Individual Qualification,A,IQ is a score derived from standardized tests to assess human intelligence."
+"ETA,initialism,general,What does ETA stand for?,Estimated Time of Arrival,Emergency Time Alert,Expected Time Advance,Electronic Transfer Agreement,A,ETA indicates when something or someone is expected to arrive."
+"FYI,initialism,general,What does FYI stand for?,Free Your Ideas,For Your Information,Find Your Interest,Follow Your Instinct,B,FYI is used to draw attention to information someone should know."
+"LOL,initialism,internet,What does LOL stand for?,Lots Of Love,Laughing Out Loud,Look Out Later,Live On Line,B,LOL is used in digital communication to indicate something is funny."
+"BRB,initialism,internet,What does BRB stand for?,Be Right Back,Better Restart Browser,Bring Recent Backup,Buy Right Below,A,BRB indicates someone will return shortly in online conversations."
+"JPEG,initialism,computing,What does JPEG stand for?,Joint Photographic Experts Group,Java Picture Export Group,Junior Photo Equipment Guide,Just Plain Electronic Graphics,A,JPEG is a commonly used method of lossy compression for digital images."
+"GIF,initialism,computing,What does GIF stand for?,Graphics Interchange Format,General Image Format,Graphical Interface File,Global Information File,A,GIF is a bitmap image format that supports animation."
+"DVD,initialism,technology,What does DVD stand for?,Dynamic Video Display,Direct View Device,Digital Versatile Disc,Data Video Drive,C,DVD is an optical disc storage format invented in 1995."
+"AI,initialism,technology,What does AI stand for?,Artificial Intelligence,Automated Intelligence,Advanced Interface,Applied Information,A,AI refers to the simulation of human intelligence in machines."
+"VR,initialism,technology,What does VR stand for?,Video Recording,Visual Reference,Variable Resolution,Virtual Reality,D,VR is a simulated experience that can be similar to or different from the real world."
+"AR,initialism,technology,What does AR stand for?,Artificial Rendering,Advanced Resolution,Active Recording,Augmented Reality,D,AR is an interactive experience where digital elements are added to the real world."
+"IoT,initialism,technology,What does IoT stand for?,Information of Things,Internet over Time,Internal Operating Technology,Internet of Things,D,IoT refers to physical devices connected to the internet and each other."
+"LASER,acronym,science,What does LASER stand for?,Light Amplification by Stimulated Emission of Radiation,Large Array Sonic Energy Radiator,Linear Acoustic Signal Enhancement Ray,Low Amplitude Sound Energy Reflection,A,LASER was originally an acronym but is now commonly used as a standard word."
+"RADAR,acronym,military,What does RADAR stand for?,Radio Detection and Ranging,Remote Area Defense and Response,Rapid Attack Detection Array,Radio Amplified Detection Array Response,A,RADAR technology was crucial during World War II for detecting aircraft."
+"SCUBA,acronym,sports,What does SCUBA stand for?,Self-Contained Underwater Breathing Apparatus,Surface Control Underwater Breathing Assembly,Submarine Contained Underwater Breathing Aid,Safe Controlled Underwater Breathing Access,A,SCUBA gear allows divers to breathe underwater independently."
+"NATO,acronym,military,What does NATO stand for?,National Atlantic Treaty Organization,North Atlantic Treaty Organization,Northern Alliance Treaty Operations,New Atlantic Territory Organization,B,NATO was formed in 1949 as a military alliance between Western nations."
+"UNICEF,acronym,government,What does UNICEF stand for?,United Nations International Children's Emergency Fund,Universal Network for International Child Education Fund,United Nations Independent Children's Education Foundation,Universal Nations International Children's Emergency Foundation,A,UNICEF originally focused on emergency relief but now works on long-term development."
+"CAPTCHA,acronym,computing,What does CAPTCHA stand for?,Computer Automated Public Turing test to tell Computers and Humans Apart,Completely Automated Public Turing test to tell Computers and Humans Apart,Central Authentication Protocol To Challenge Human Access,Computer Authentication Process To Control Human Access,B,CAPTCHA tests help websites distinguish between human users and automated bots."
+"WYSIWYG,acronym,computing,What does WYSIWYG stand for?,What You See Is What You Get,Where You Start Is Where You Go,When You Save It Will You Get,What You Select Is What You Generate,A,WYSIWYG editors show content during editing exactly as it will appear when printed."
+"BIOS,initialism,computing,What does BIOS stand for?,Basic Input/Output System,Binary Integrated Operating System,Built-In Operating Software,Basic Internal Operating Standard,A,BIOS initializes hardware during boot before the operating system loads."
+"FOMO,acronym,internet,What does FOMO stand for?,Fear Of Missing Out,Friends Only Messaging Online,Frequently Occurring Mobile Obsession,Finding Other Meaningful Options,A,FOMO describes anxiety over missing exciting or interesting events."
+"YOLO,acronym,internet,What does YOLO stand for?,Young Only Live Once,You Only Live Once,Year Of Living Optimally,Your Own Life Outcomes,B,YOLO became popular social media slang encouraging taking risks or chances."
+"SONAR,acronym,military,What does SONAR stand for?,Sound Navigation and Ranging,Submarine Oceanic Navigation and Response,Surface Ocean Navigation and Ranging,Silent Oceanic Navigation Array Response,A,SONAR uses sound propagation to navigate and detect objects underwater."
+"SWAT,initialism,government,What does SWAT stand for?,Special Weapons and Tactics,Strategic Weapons Action Team,Specialized Warfare and Training,Special Weapons Action Task force,A,SWAT teams handle high-risk operations like hostage situations and raids."
+"NYSE,initialism,finance,What does NYSE stand for?,New York Stock Exchange,National Yearly Stock Evaluation,New York Securities Exchange,National York Stock Enterprise,A,NYSE is the world's largest stock exchange by market capitalization."
+"PIN,initialism,banking,What does PIN stand for?,Personal Identification Number,Private Identity Number,Protected Information Number,Personal Identity Node,A,PINs are numeric passwords used to authenticate users at ATMs and card readers."
+"NASDAQ,acronym,finance,What does NASDAQ stand for?,National Association of Securities Dealers Automated Quotations,North American Stock Dealers Automated Query,National Automated Securities Dealers Association Quotes,New American Stock Dealers Automated Quotation,A,NASDAQ was the first electronic stock market when it launched in 1971."
+"ATF,initialism,government,What does ATF stand for?,Alcohol Tobacco and Firearms,Advanced Tactical Forces,American Trade Federation,Automated Task Force,A,ATF is a federal law enforcement agency under the Department of Justice."
+"CDC,initialism,government,What does CDC stand for?,Centers for Disease Control and Prevention,Central Disease Control,Community Disease Center,Clinical Disease Control,A,CDC is the national public health agency of the United States."
+"FDA,initialism,government,What does FDA stand for?,Food and Drug Administration,Federal Drug Authority,Food Distribution Agency,Federal Drug Association,A,FDA regulates food safety and approves medications in the United States."
+"IRS,initialism,government,What does IRS stand for?,Internal Revenue Service,International Revenue System,Independent Revenue Service,Interstate Revenue Service,A,IRS is the revenue service of the federal government collecting taxes."
+"EPA,initialism,government,What does EPA stand for?,Environmental Protection Agency,Energy Policy Administration,Emergency Planning Agency,Environmental Policy Association,A,EPA protects environmental and human health through regulations and enforcement."
+"NATO,initialism,military,What does NATO stand for?,North American Trade Organization,North Atlantic Treaty Organization,National Air Transport Operations,Northern Alliance Tactical Operations,B,NATO provides collective defense where an attack on one member is an attack on all."
+"WHO,initialism,government,What does WHO stand for?,World Health Organization,World Housing Organization,Western Health Operations,World Humanitarian Operations,A,WHO coordinates international health efforts within the United Nations system."
+"IMF,initialism,finance,What does IMF stand for?,International Monetary Fund,Independent Money Foundation,International Market Foundation,Interstate Money Fund,A,IMF promotes international monetary cooperation and provides loans to countries."
+"UNESCO,acronym,education,What does UNESCO stand for?,United Nations Educational Scientific and Cultural Organization,Universal Network for Education Science and Cultural Organization,United Nations Economic Social and Cultural Operations,Universal Nations Educational and Scientific Cultural Operations,A,UNESCO promotes international collaboration in education science and culture."
+"OSHA,acronym,government,What does OSHA stand for?,Occupational Safety and Health Administration,Organizational Safety and Health Authority,Official Safety and Health Agency,Operational Safety and Health Association,A,OSHA ensures safe and healthy working conditions through regulations and training."
+"HIPAA,acronym,medical,What does HIPAA stand for?,Health Insurance Portability and Accountability Act,Hospital Information Privacy and Access Act,Healthcare Information Protection and Audit Act,Health Insurance Privacy and Access Authority,A,HIPAA protects sensitive patient health information from disclosure without consent."
+"CPR,initialism,medical,What does CPR stand for?,Cardiopulmonary Resuscitation,Cardiac Pulse Revival,Central Pulse Restoration,Clinical Patient Recovery,A,CPR can double or triple survival chances during cardiac arrest when performed immediately."
+"ICU,initialism,medical,What does ICU stand for?,Intensive Care Unit,Internal Care Unit,Immediate Care Unit,Individual Care Unit,A,ICU provides intensive treatment and monitoring for critically ill patients."
+"MRI,initialism,medical,What does MRI stand for?,Magnetic Resonance Imaging,Medical Radiology Imaging,Multiple Range Imaging,Medical Response Imaging,A,MRI uses magnetic fields and radio waves to create detailed body images."
+"CT,initialism,medical,What does CT stand for?,Computed Tomography,Central Therapy,Clinical Treatment,Cardiac Testing,A,CT scans use X-rays to create cross-sectional images of bones organs and tissues."
+"EKG,initialism,medical,What does EKG stand for?,Electrocardiogram,Electronic Kidney Graph,Emergency Kidney Guide,Electro Kinetic Graph,A,EKG records electrical activity of the heart to detect heart problems."
+"ER,initialism,medical,What does ER stand for?,Emergency Room,Emergency Response,External Radiology,Emergency Registry,A,ER provides immediate treatment for acute illnesses and life-threatening injuries."
+"PTSD,initialism,medical,What does PTSD stand for?,Post-Traumatic Stress Disorder,Pre-Traumatic Stress Disorder,Persistent Traumatic Stress Disorder,Physical Traumatic Stress Disorder,A,PTSD can develop after experiencing or witnessing a terrifying event."
+"ADD,initialism,medical,What does ADD stand for?,Attention Deficit Disorder,Acute Development Disorder,Advanced Diagnostic Disorder,Attention Development Delay,A,ADD is now typically referred to as ADHD without hyperactivity symptoms."
+"ADHD,initialism,medical,What does ADHD stand for?,Attention Deficit Hyperactivity Disorder,Acute Development Hyperactivity Disorder,Attention Deficiency and Hyperactive Disorder,Advanced Diagnostic Hyperactivity Disorder,A,ADHD is one of the most common neurodevelopmental disorders of childhood."
+"OCD,initialism,medical,What does OCD stand for?,Obsessive-Compulsive Disorder,Organic Cognitive Disorder,Ongoing Compulsive Disorder,Obsessive Cognitive Disorder,A,OCD involves recurring unwanted thoughts and repetitive behaviors."
+"COPD,initialism,medical,What does COPD stand for?,Chronic Obstructive Pulmonary Disease,Continuous Oxygen Processing Disorder,Chronic Oxygen Pathway Disease,Central Obstructive Pulmonary Disorder,A,COPD is typically caused by long-term exposure to irritating gases or particles."
+"NPO,initialism,business,What does NPO stand for?,Non-Profit Organization,National Policy Organization,New Project Operations,Network Planning Organization,A,NPOs operate for charitable scientific literary or educational purposes."
+"LLC,initialism,business,What does LLC stand for?,Limited Liability Company,Legal Liability Corporation,Licensed Liability Company,Local Liability Corporation,A,LLC combines corporation benefits with partnership and sole proprietorship flexibility."
+"IPO,initialism,finance,What does IPO stand for?,Initial Public Offering,International Public Offering,Independent Public Operations,Internal Public Offering,A,IPO is when a private company first sells shares to the public."
+"ROI,initialism,finance,What does ROI stand for?,Return on Investment,Rate of Interest,Revenue Operations Index,Regional Operations Investment,A,ROI measures the efficiency of an investment relative to its cost."
+"KPI,initialism,business,What does KPI stand for?,Key Performance Indicator,Known Performance Index,Key Process Indicator,Key Planning Initiative,A,KPIs measure how effectively a company achieves key business objectives."
+"CRM,initialism,business,What does CRM stand for?,Customer Relationship Management,Client Resource Management,Central Records Management,Customer Resource Monitoring,A,CRM systems help companies manage interactions with current and potential customers."
+"ERP,initialism,business,What does ERP stand for?,Enterprise Resource Planning,Electronic Resource Processing,Executive Resource Planning,External Resource Processing,A,ERP integrates core business processes into a single comprehensive system."
+"B2B,initialism,business,What does B2B stand for?,Business to Business,Bank to Business,Brand to Business,Budget to Business,A,B2B refers to transactions between businesses rather than between business and consumers."
+"B2C,initialism,business,What does B2C stand for?,Business to Consumer,Bank to Consumer,Brand to Consumer,Budget to Consumer,A,B2C refers to transactions between businesses and individual consumers."
+"SaaS,acronym,technology,What does SaaS stand for?,Software as a Service,System as a Service,Security as a Service,Storage as a Service,A,SaaS delivers software applications over the internet on a subscription basis."
+"SEO,initialism,internet,What does SEO stand for?,Search Engine Optimization,Social Engagement Operations,System Enhancement Operations,Site Engagement Optimization,A,SEO improves website visibility in search engine results pages."
+"UX,initialism,technology,What does UX stand for?,User Experience,Universal Exchange,User Extension,Unified Experience,A,UX focuses on creating products that provide meaningful user experiences."
+"UI,initialism,technology,What does UI stand for?,User Interface,Universal Interface,User Integration,Unified Interface,A,UI is the point of interaction between users and digital products."
+"QR,initialism,technology,What does QR stand for?,Quick Response,Quality Recognition,Quantum Reader,Quick Recognition,A,QR codes can store more information than traditional barcodes in a smaller space."
+"NFC,initialism,technology,What does NFC stand for?,Near Field Communication,Network File Connection,New Frequency Channel,National File Center,A,NFC enables two devices to communicate when within close proximity."
+"RFID,initialism,technology,What does RFID stand for?,Radio Frequency Identification,Remote File Information Database,Rapid Frequency Identity Detection,Radio File Information Directory,A,RFID uses electromagnetic fields to automatically identify and track tags."
+"ISP,initialism,technology,What does ISP stand for?,Internet Service Provider,Information System Provider,Internal Service Protocol,International Service Provider,A,ISP provides internet access and related services to individuals and businesses."
+"VPN,initialism,technology,What does VPN stand for?,Virtual Private Network,Verified Personal Network,Variable Protocol Network,Visual Processing Network,A,VPN extends a private network across a public network for security."
+"IP,initialism,technology,What does IP stand for?,Internet Protocol,Information Processing,Internal Protocol,International Protocol,A,IP is the principal communications protocol for routing data across networks."
+"SIM,initialism,technology,What does SIM stand for?,Subscriber Identity Module,System Identity Manager,Secure Identity Module,Standard Identity Module,A,SIM cards authenticate subscribers on mobile devices and store account information."

@@ -1,0 +1,27 @@
+# Commands to push Initializer to jenith-tdport/initializer
+# ============================================================
+
+# Option 1: Run the prepared script
+bash push_to_github.sh
+
+# Option 2: Manual commands (if script doesn't work)
+git remote add origin https://github.com/jenith-tdport/initializer.git
+git branch -M main
+git push -u origin main
+
+# If you get authentication errors, use:
+# 1. Personal Access Token (recommended):
+#    - Go to GitHub Settings > Developer settings > Personal access tokens
+#    - Generate a token with 'repo' scope
+#    - When prompted for password, use the token instead
+
+# 2. Or use GitHub CLI:
+gh auth login
+gh repo create initializer --public --source=. --remote=origin --push
+
+# After successful push, your repository will be at:
+# https://github.com/jenith-tdport/initializer
+
+# To verify:
+git remote -v
+git branch -a
