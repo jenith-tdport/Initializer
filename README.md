@@ -1,13 +1,20 @@
 # Initializer - Quiz Game 🎯
 
+![React](https://img.shields.io/badge/React-18.2-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue)
+![Vite](https://img.shields.io/badge/Vite-5.0-purple)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+An interactive quiz game that tests your knowledge of acronyms, initialisms, and abbreviations. Built with React, TypeScript, and Vite, featuring a beautiful purple gradient UI and intelligent answer randomization.
+
 ## Project Overview
 - **Name**: Initializer
 - **Goal**: A fun, educational quiz game to test knowledge of acronyms, initialisms, and abbreviations
 - **Features**: Beautiful purple gradient UI, multiple-choice questions, score tracking, keyboard support, best score persistence
 
-## URLs
-- **Live Demo**: https://3000-if7xr4f8q4qtoa12pwywg-6532622b.e2b.dev
-- **GitHub**: (To be configured)
+## 🎮 Demo & Links
+- **Live Demo**: [Play the Game](https://your-site.pages.dev) *(Deploy to Cloudflare Pages)*
+- **GitHub**: [View Source](https://github.com/yourusername/initializer)
 
 ## Completed Features ✅
 - **Start Screen**: Welcome screen with START button and best score display
