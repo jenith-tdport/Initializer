@@ -10,7 +10,7 @@
 #
 # If you want to use a different repository name, change it below:
 
-GITHUB_USERNAME="YOUR_GITHUB_USERNAME"
+GITHUB_USERNAME="jenith-tdport"
 REPO_NAME="initializer"
 
 echo "Setting up GitHub repository..."

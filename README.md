@@ -14,7 +14,7 @@ An interactive quiz game that tests your knowledge of acronyms, initialisms, and
 
 ## 🎮 Demo & Links
 - **Live Demo**: [Play the Game](https://your-site.pages.dev) *(Deploy to Cloudflare Pages)*
-- **GitHub**: [View Source](https://github.com/yourusername/initializer)
+- **GitHub**: [View Source](https://github.com/jenith-tdport/initializer)
 
 ## Completed Features ✅
 - **Start Screen**: Welcome screen with START button and best score display
