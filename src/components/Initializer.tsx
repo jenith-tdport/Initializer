@@ -3,7 +3,7 @@ import { Question, GameState, InitializerProps, GameSummary } from '../types';
 import { parseCSV, shuffleArray } from '../utils/csvParser';
 import { getBestScore, setBestScore } from '../utils/storage';
 import { StartScreen } from './StartScreen';
-import { QuestionScreen } from './QuestionScreen';
+import { ShuffledQuestionScreen } from './ShuffledQuestionScreen';
 import { ResultsScreen } from './ResultsScreen';
 import { LoadingScreen } from './LoadingScreen';
 import { ErrorScreen } from './ErrorScreen';
@@ -81,25 +81,14 @@ export const Initializer: React.FC<InitializerProps> = ({
     });
   };
 
-  const handleAnswerSelect = (answer: string) => {
-    setGameState(prev => ({
-      ...prev,
-      selectedAnswer: answer,
-    }));
-  };
-
-  const handleSubmit = () => {
-    if (!gameState.selectedAnswer) return;
-    
-    const currentQuestion = gameState.questions[gameState.currentQuestionIndex];
-    const isCorrect = gameState.selectedAnswer === currentQuestion.correct;
+  const handleAnswerSubmit = (isCorrect: boolean) => {
     const newScore = isCorrect ? gameState.score + 100 : gameState.score;
     
     setGameState(prev => ({
       ...prev,
       score: newScore,
       showResult: true,
-      answers: [...prev.answers, prev.selectedAnswer!],
+      answers: [...prev.answers, isCorrect ? 'correct' : 'incorrect'],
     }));
   };
 
@@ -109,7 +98,7 @@ export const Initializer: React.FC<InitializerProps> = ({
     if (nextIndex >= gameState.questions.length) {
       // Game finished
       const correctCount = gameState.answers.filter(
-        (answer, index) => answer === gameState.questions[index].correct
+        answer => answer === 'correct'
       ).length;
       
       const bestScore = getBestScore();
@@ -152,27 +141,7 @@ export const Initializer: React.FC<InitializerProps> = ({
     loadQuestions();
   };
 
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (gameState.gamePhase !== 'playing') return;
-      
-      const key = e.key.toUpperCase();
-      
-      if (['A', 'B', 'C', 'D'].includes(key) && !gameState.showResult) {
-        handleAnswerSelect(key);
-      } else if (e.key === 'Enter') {
-        if (!gameState.showResult && gameState.selectedAnswer) {
-          handleSubmit();
-        } else if (gameState.showResult) {
-          handleNext();
-        }
-      }
-    };
-    
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [gameState]);
+  // Note: Keyboard navigation is now handled inside ShuffledQuestionScreen
 
   if (loading) {
     return <LoadingScreen />;
@@ -188,7 +157,7 @@ export const Initializer: React.FC<InitializerProps> = ({
 
   if (gameState.gamePhase === 'results') {
     const correctCount = gameState.answers.filter(
-      (answer, index) => answer === gameState.questions[index].correct
+      answer => answer === 'correct'
     ).length;
     
     const summary: GameSummary = {
@@ -204,15 +173,12 @@ export const Initializer: React.FC<InitializerProps> = ({
   const currentQuestion = gameState.questions[gameState.currentQuestionIndex];
   
   return (
-    <QuestionScreen
+    <ShuffledQuestionScreen
       question={currentQuestion}
       questionNumber={gameState.currentQuestionIndex + 1}
       totalQuestions={gameState.questions.length}
       score={gameState.score}
-      selectedAnswer={gameState.selectedAnswer}
-      showResult={gameState.showResult}
-      onAnswerSelect={handleAnswerSelect}
-      onSubmit={handleSubmit}
+      onAnswerSubmit={handleAnswerSubmit}
       onNext={handleNext}
     />
   );
