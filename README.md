@@ -80,6 +80,18 @@ The game accepts these props:
 - **State Management**: React hooks (useState, useEffect)
 - **Deployment**: PM2 process manager for production
 
+## Question Database
+The game now includes **40 diverse questions** with **properly distributed correct answers** across all options (A, B, C, D):
+- **Computing** (14): CPU, RAM, API, HTML, CSS, USB, PDF, HTTP, JSON, SQL, URL, WWW, JPEG, GIF
+- **Technology** (8): GPS, WiFi, LED, DVD, AI, VR, AR, IoT
+- **Internet Culture** (3): LOL, BRB, FYI
+- **Business/Education** (4): CEO, GDP, MBA, PhD
+- **Science** (2): DNA, IQ
+- **Government** (2): NASA, FBI
+- **General** (6): FAQ, VIP, DIY, ASAP, ETA, ATM
+
+**Answer Distribution**: Questions now have balanced correct answers (25% each for A, B, C, D options) making the game more challenging!
+
 ## Features Not Yet Implemented
 - Category filtering UI (backend support exists)
 - Custom question count selector
