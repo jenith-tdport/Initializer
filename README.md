@@ -142,11 +142,103 @@ npm run build
 npm run preview
 ```
 
-### Adding Questions
-Edit the `/public/data/initializer.csv` file with this format:
+### Adding More Questions to Expand the Game
+
+The game loads questions from `/public/data/initializer.csv`. You can easily add more acronyms, initialisms, and abbreviations to make the game larger and more challenging.
+
+#### CSV File Format
+Each row in the CSV represents one question with these columns:
 ```csv
 term,kind,category,question,optionA,optionB,optionC,optionD,correct,explanation
 ```
+
+#### Column Definitions:
+- **term**: The acronym/initialism itself (e.g., "CPU", "NASA", "LOL")
+- **kind**: Type of abbreviation - use one of:
+  - `initialism` - Pronounced letter by letter (FBI, CPU, ATM)
+  - `acronym` - Pronounced as a word (NASA, RADAR, SCUBA)
+  - `backronym` - Acronym created after the word existed
+- **category**: Topic area for future filtering features:
+  - `computing` - Technology and computer terms
+  - `technology` - General tech and gadgets
+  - `science` - Scientific terms
+  - `business` - Corporate and economic terms
+  - `government` - Government agencies and political terms
+  - `education` - Academic terms
+  - `internet` - Online culture and social media
+  - `general` - Everyday abbreviations
+  - `medical` - Healthcare terms
+  - `military` - Defense and military terms
+  - Add your own categories as needed!
+- **question**: The question text (usually "What does [TERM] stand for?")
+- **optionA, optionB, optionC, optionD**: Four answer choices
+- **correct**: Which option is correct (must be A, B, C, or D)
+- **explanation**: Educational text shown after answering (keep it concise)
+
+#### Example of Adding New Questions:
+
+```csv
+RADAR,acronym,military,What does RADAR stand for?,Radio Detection And Ranging,Rapid Detection And Response,Remote Area Detection And Reconnaissance,Radio Distance And Range,A,RADAR was originally an acronym but is now used as a standard word.
+SCUBA,acronym,sports,What does SCUBA stand for?,Self-Contained Underwater Breathing Apparatus,Submersible Craft Using Breathing Air,Special Compressed Underwater Breathing Aid,Submarine Crew Underwater Breathing Apparatus,A,SCUBA diving equipment allows underwater breathing without surface air supply.
+YOLO,acronym,internet,What does YOLO stand for?,You're Only Living Once,You Obviously Love Oreos,Young Optimistic Life Outlook,You Only Live Once,D,YOLO became popular as a motto to seize the moment and take chances.
+```
+
+#### Best Practices for Adding Questions:
+
+1. **Make Wrong Answers Plausible**: Create believable alternatives that sound reasonable
+   - ❌ Bad: "CPU = Cute Purple Unicorn" (too obviously wrong)
+   - ✅ Good: "CPU = Core Processing Unit" (sounds technical and plausible)
+
+2. **Balance Your Correct Answers**: Distribute correct answers across A, B, C, D
+   - Check distribution: `tail -n +2 initializer.csv | cut -d',' -f9 | sort | uniq -c`
+   - Aim for roughly 25% in each option
+
+3. **Keep Explanations Educational**: Add interesting facts, not just the definition
+   - ❌ Basic: "CPU means Central Processing Unit"
+   - ✅ Better: "The CPU executes instructions and is the brain of the computer"
+
+4. **Group Similar Difficulty**: Mix easy and hard questions
+   - Easy: Common terms like USB, PDF, FAQ
+   - Medium: Technical terms like API, SQL, HTML
+   - Hard: Specialized terms like PCMCIA, TWAIN, MIDI
+
+5. **Test Your Questions**: After adding new questions:
+   - Ensure no typos or formatting errors
+   - Verify the correct answer is actually correct
+   - Check that the game still loads properly
+
+#### Quick Method to Add Questions:
+
+1. **Direct CSV Edit** (for a few questions):
+   ```bash
+   # Open the CSV file in your favorite editor
+   nano public/data/initializer.csv
+   # Add new rows at the end
+   ```
+
+2. **Using a Spreadsheet** (for bulk additions):
+   - Open `initializer_questions_complete.xlsx` in Excel/Google Sheets
+   - Add new rows in the "Quiz Questions" tab
+   - Export as CSV to `public/data/initializer.csv`
+
+3. **Via Google Sheets** (for collaborative editing):
+   - Upload the CSV to Google Sheets
+   - Share with collaborators to add questions
+   - Publish as CSV and update the game's `sheetUrl`
+
+#### Categories for Expansion Ideas:
+
+- **Medical**: MRI, EKG, ICU, ER, IV, ADHD, OCD
+- **Military**: AWOL, MIA, POW, SEAL, NATO, DEFCON
+- **Sports**: ESPN, UFC, FIFA, NBA, NFL, MVP
+- **Music**: DJ, MP3, EDM, R&B, CD, LP
+- **Food**: MSG, GMO, EVOO, BLT, PB&J
+- **Travel**: TSA, ETA, GPS, SUV, RV, ATV
+- **Social Media**: DM, RT, AMA, TBT, FOMO, SMH
+- **Gaming**: RPG, FPS, NPC, DLC, MMO, RNG
+- **Finance**: ROI, IPO, ETF, APR, IRA, ATM
+
+The game automatically handles any number of questions - just keep adding rows!
 
 ### Deployment
 - **Platform**: Ready for Cloudflare Pages deployment
