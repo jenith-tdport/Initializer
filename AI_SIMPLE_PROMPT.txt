@@ -1,0 +1,23 @@
+SIMPLE PROMPT FOR ANY AI:
+=========================
+
+Just say this to ChatGPT, Claude, or any AI:
+
+"Read the instructions in this CSV file and follow them exactly. Add 50 new quiz questions at the end and return the complete file."
+
+Then paste the contents of: initializer_with_better_instructions.csv
+
+That's it! The file now contains everything the AI needs.
+
+KEY IMPROVEMENTS IN THE NEW FILE:
+- Explicit instruction to ROTATE answers (A,B,C,D)
+- Clear examples showing answer rotation
+- Warning about what NOT to do (all A's)
+- Reminder after every 4 questions to check balance
+- Specific numbers: "Make 12-13 with A, 12-13 with B, etc."
+- Clear directive: "Return COMPLETE file"
+
+The AI should now:
+1. Keep all instructions and existing questions
+2. Add 50 new questions with BALANCED answers
+3. Return everything in one file ready to use

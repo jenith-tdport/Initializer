@@ -1,0 +1,105 @@
+# INITIALIZER QUIZ GAME - QUESTION DATABASE
+# ==========================================
+# 
+# AI INSTRUCTIONS - FOLLOW THESE EXACTLY:
+# =======================================
+# 
+# TASK: Add exactly 50 new quiz questions at the END of this file.
+#       Return the COMPLETE file including these instructions and all existing data.
+# 
+# ⚠️ CRITICAL RULES - MUST FOLLOW:
+# 
+# 1. DO NOT DELETE OR MODIFY:
+#    - These instruction comments (lines starting with #)
+#    - The header line (term,kind,category,question,optionA,optionB,optionC,optionD,correct,explanation)
+#    - Any existing question rows
+#    
+# 2. ANSWER DISTRIBUTION IS MANDATORY:
+#    The "correct" column (column 9) MUST be balanced across your 50 new questions:
+#    - Make 12-13 questions with correct answer A
+#    - Make 12-13 questions with correct answer B  
+#    - Make 12-13 questions with correct answer C
+#    - Make 12-13 questions with correct answer D
+#    
+#    ❌ WRONG: Making 40 questions with answer A, 5 with B, 3 with C, 2 with D
+#    ✅ RIGHT: Rotating answers like: A,B,C,D,A,D,C,B,A,C,B,D... etc.
+#    
+#    TIP: After every 4 questions, check you've used A,B,C,D once each.
+# 
+# 3. FORMAT - Each row must have EXACTLY these 10 comma-separated fields:
+#    term,kind,category,question,optionA,optionB,optionC,optionD,correct,explanation
+#    
+#    WHERE:
+#    - term: The acronym/initialism (e.g., DVD, NFL, JPEG)
+#    - kind: Either "acronym" OR "initialism" (acronym if pronounced as word, initialism if letters)
+#    - category: One of: computing, technology, science, business, government, education,
+#                       internet, general, medical, military, sports, food, finance, gaming, music, travel
+#    - question: Usually "What does X stand for?" 
+#    - optionA: First choice (put correct answer here if correct=A)
+#    - optionB: Second choice (put correct answer here if correct=B)
+#    - optionC: Third choice (put correct answer here if correct=C)
+#    - optionD: Fourth choice (put correct answer here if correct=D)
+#    - correct: MUST be exactly one of: A, B, C, or D (ROTATE THESE!)
+#    - explanation: Educational fact, max 100 characters
+# 
+# 4. MAKE WRONG ANSWERS BELIEVABLE:
+#    ❌ BAD: "FBI = Funny Banana Investigation" (obviously fake)
+#    ✅ GOOD: "FBI = Federal Banking Institute" (plausible but wrong)
+# 
+# 5. OUTPUT REQUIREMENTS:
+#    - NO quotation marks wrapping entire lines
+#    - NO extra blank lines between questions
+#    - NO additional text or explanations outside the CSV format
+#    - Return EVERYTHING: instructions + existing questions + 50 new questions
+# 
+# EXAMPLE OF CORRECT NEW QUESTIONS (note how correct answer rotates A,B,C,D):
+# HDMI,initialism,technology,What does HDMI stand for?,High-Definition Multimedia Interface,High-Definition Media Input,High-Density Media Interface,High-Definition Monitor Interface,A,HDMI carries video and audio signals between devices.
+# RSVP,initialism,general,What does RSVP stand for?,Reply Soon Via Post,Répondez s'il vous plaît,Reserve Seating Verification Please,Response Service Verification Protocol,B,RSVP is French for "please respond" used on invitations.
+# NYSE,initialism,finance,What does NYSE stand for?,New York Securities Exchange,New York Stock Evaluation,New York Stock Exchange,New York Securities Evaluation,C,NYSE is the world's largest stock exchange by market cap.
+# HDTV,initialism,technology,What does HDTV stand for?,High-Density Television,High-Data Television,High-Digital Television,High-Definition Television,D,HDTV provides higher resolution than standard television.
+# 
+# CURRENT STATUS: File has 39 existing questions. After you add 50, there should be 89 total.
+# 
+# REMEMBER: Vary your correct answers! Use A for ~13 questions, B for ~13, C for ~12, D for ~12.
+# 
+# === END OF INSTRUCTIONS - DO NOT MODIFY ANYTHING BELOW THIS LINE ===
+term,kind,category,question,optionA,optionB,optionC,optionD,correct,explanation
+CPU,initialism,computing,What does CPU stand for?,Central Processing Unit,Computer Programming Unit,Core Processing Unit,Central Program Unit,A,The CPU executes instructions and is the brain of the computer.
+RAM,initialism,computing,What does RAM stand for?,Rapid Access Module,Read And Modify,Random Access Memory,Remote Access Manager,C,RAM is volatile memory used for temporary data storage while programs run.
+API,initialism,computing,What does API stand for?,Automated Program Integration,Application Programming Interface,Advanced Port Interface,App Processing Instruction,B,APIs let different software systems communicate with each other.
+HTML,initialism,computing,What does HTML stand for?,High Tech Modern Language,Home Tool Markup Language,Hyper Transfer Machine Language,HyperText Markup Language,D,HTML is the standard markup language for creating web pages.
+CSS,initialism,computing,What does CSS stand for?,Cascading Style Sheets,Computer Style System,Creative Style Scripts,Central Server System,A,CSS describes how HTML elements should be displayed.
+GPS,initialism,technology,What does GPS stand for?,General Position Sensor,Geographic Point System,Global Positioning System,Guided Pathway Signal,C,GPS uses satellites to determine location anywhere on Earth.
+NASA,initialism,science,What does NASA stand for?,North American Space Agency,National Aeronautics and Space Administration,National Aviation and Space Authority,New Aerospace Systems Agency,B,NASA is the US federal agency responsible for space programs.
+FBI,initialism,government,What does FBI stand for?,Federal Banking Institution,Foreign Border Inspection,Federal Business Institute,Federal Bureau of Investigation,D,The FBI is the domestic intelligence and security service of the United States.
+CEO,initialism,business,What does CEO stand for?,Central Executive Operations,Corporate Efficiency Officer,Company Evaluation Officer,Chief Executive Officer,D,The CEO is the highest-ranking person in a company.
+GDP,initialism,economics,What does GDP stand for?,General Development Plan,Global Distribution Protocol,Gross Domestic Product,Government Development Program,C,GDP measures the total value of goods and services produced by a country.
+USB,initialism,computing,What does USB stand for?,United System Board,User System Bridge,Unified Storage Block,Universal Serial Bus,D,USB is an industry standard for cables and connectors.
+WiFi,initialism,technology,What does WiFi stand for?,Wide Field Internet,Wireless Fidelity,World Internet Federation,Web Interface Field,B,WiFi is a wireless networking technology using radio waves.
+PDF,initialism,computing,What does PDF stand for?,Personal Data File,Print Display Format,Portable Document Format,Program Data Format,C,PDF is a file format developed by Adobe for document sharing.
+ATM,initialism,banking,What does ATM stand for?,Automated Teller Machine,Automatic Transaction Module,Advanced Transfer Method,Account Transfer Manager,A,ATMs allow customers to perform banking transactions without a human teller.
+DNA,initialism,science,What does DNA stand for?,Dynamic Natural Algorithm,Deoxyribonucleic Acid,Data Network Architecture,Digital Network Access,B,DNA carries genetic instructions for all known living organisms.
+LED,initialism,technology,What does LED stand for?,Low Energy Device,Laser Enhanced Display,Light Emitting Diode,Linear Electric Driver,C,LEDs are semiconductor devices that emit light when current flows through them.
+FAQ,initialism,general,What does FAQ stand for?,Fast Answer Queue,Full Article Query,First Aid Questions,Frequently Asked Questions,D,FAQs are lists of common questions and answers about a topic.
+VIP,initialism,general,What does VIP stand for?,Verified Identity Pass,Virtual Interactive Platform,Very Important Person,Visual Information Protocol,C,VIP refers to someone accorded special privileges due to their status.
+DIY,initialism,general,What does DIY stand for?,Design It Yourself,Do It Yourself,Daily Improvement Yield,Direct Input Yield,B,DIY refers to building or repairing something without professional help.
+ASAP,initialism,general,What does ASAP stand for?,Always Safe And Protected,As Soon As Possible,Advanced System Application Protocol,Automatic Service And Processing,B,ASAP is used to indicate something needs urgent attention.
+HTTP,initialism,computing,What does HTTP stand for?,Hyper Transfer Text Program,HyperText Transfer Protocol,High Tech Transfer Process,Host To Terminal Protocol,B,HTTP is the foundation of data communication for the World Wide Web.
+JSON,initialism,computing,What does JSON stand for?,Java System Object Notation,JavaScript Object Network,JavaScript Object Notation,Java Standard Output Name,C,JSON is a lightweight data interchange format that's easy for humans to read.
+SQL,initialism,computing,What does SQL stand for?,Structured Query Language,System Query Logic,Sequential Question List,Server Quality Level,A,SQL is used to communicate with and manipulate databases.
+URL,initialism,computing,What does URL stand for?,Universal Resource Link,User Resource Location,Unified Registry Location,Uniform Resource Locator,D,URL is the address of a resource on the Internet.
+WWW,initialism,computing,What does WWW stand for?,Wide World Website,Web Wide World,World Web Window,World Wide Web,D,WWW is the system of interlinked hypertext documents accessed via the Internet.
+PhD,initialism,education,What does PhD stand for?,Professional Higher Degree,Philosophy Doctorate,Doctor of Philosophy,Post Honorary Degree,C,PhD is the highest academic degree awarded by universities.
+MBA,initialism,education,What does MBA stand for?,Major Business Associate,Master of Business Administration,Management Business Administration,Modern Banking Academy,B,MBA is a graduate degree focused on business administration and management.
+IQ,initialism,psychology,What does IQ stand for?,Intelligence Quotient,Intellectual Quality,Information Query,Individual Qualification,A,IQ is a score derived from standardized tests to assess human intelligence.
+ETA,initialism,general,What does ETA stand for?,Estimated Time of Arrival,Emergency Time Alert,Expected Time Advance,Electronic Transfer Agreement,A,ETA indicates when something or someone is expected to arrive.
+FYI,initialism,general,What does FYI stand for?,Free Your Ideas,For Your Information,Find Your Interest,Follow Your Instinct,B,FYI is used to draw attention to information someone should know.
+LOL,initialism,internet,What does LOL stand for?,Lots Of Love,Laughing Out Loud,Look Out Later,Live On Line,B,LOL is used in digital communication to indicate something is funny.
+BRB,initialism,internet,What does BRB stand for?,Be Right Back,Better Restart Browser,Bring Recent Backup,Buy Right Below,A,BRB indicates someone will return shortly in online conversations.
+JPEG,initialism,computing,What does JPEG stand for?,Joint Photographic Experts Group,Java Picture Export Group,Junior Photo Equipment Guide,Just Plain Electronic Graphics,A,JPEG is a commonly used method of lossy compression for digital images.
+GIF,initialism,computing,What does GIF stand for?,Graphics Interchange Format,General Image Format,Graphical Interface File,Global Information File,A,GIF is a bitmap image format that supports animation.
+DVD,initialism,technology,What does DVD stand for?,Dynamic Video Display,Direct View Device,Digital Versatile Disc,Data Video Drive,C,DVD is an optical disc storage format invented in 1995.
+AI,initialism,technology,What does AI stand for?,Artificial Intelligence,Automated Intelligence,Advanced Interface,Applied Information,A,AI refers to the simulation of human intelligence in machines.
+VR,initialism,technology,What does VR stand for?,Video Recording,Visual Reference,Variable Resolution,Virtual Reality,D,VR is a simulated experience that can be similar to or different from the real world.
+AR,initialism,technology,What does AR stand for?,Artificial Rendering,Advanced Resolution,Active Recording,Augmented Reality,D,AR is an interactive experience where digital elements are added to the real world.
+IoT,initialism,technology,What does IoT stand for?,Information of Things,Internet over Time,Internal Operating Technology,Internet of Things,D,IoT refers to physical devices connected to the internet and each other.
