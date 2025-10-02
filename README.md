@@ -12,6 +12,7 @@
 ## Completed Features ✅
 - **Start Screen**: Welcome screen with START button and best score display
 - **Quiz Gameplay**: 10 random questions per session from CSV data source
+- **Answer Randomization**: Options shuffle on each question to prevent pattern recognition (NEW!)
 - **Answer Selection**: Click or use keyboard (A/B/C/D keys) to select answers
 - **Double-tap to Submit**: Click same answer twice or press Enter to submit
 - **Visual Feedback**: Green for correct answers, red for incorrect
